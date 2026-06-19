@@ -1,0 +1,353 @@
+/* ==============================================
+   NEEDHELP - ESTILO PROFESIONAL
+   Diseño moderno, limpio y funcional
+============================================== */
+
+/* ---------- Variables y Fuentes ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --color-primario: #165DFF;       /* Azul principal - Confianza */
+    --color-secundario: #36CFC0;     /* Turquesa - Ayuda / Acción */
+    --color-acento: #FF7D00;         /* Naranja - Destacados */
+    --color-texto: #1D2129;          /* Texto principal */
+    --color-texto-claro: #86909C;    /* Texto secundario */
+    --color-fondo: #F2F3F5;          /* Fondo general */
+    --color-blanco: #FFFFFF;         /* Blanco puro */
+    --color-borde: #E5E6EB;          /* Bordes suaves */
+    --sombra-suave: 0 2px 12px rgba(0, 0, 0, 0.08);
+    --sombra-media: 0 4px 20px rgba(0, 0, 0, 0.12);
+    --sombra-fuerte: 0 8px 32px rgba(22, 93, 255, 0.15);
+    --radio-borde: 12px;
+    --radio-borde-grande: 16px;
+    --transicion: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---------- Reset General ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------- Contenedor Central ---------- */
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* ---------- Tipografía ---------- */
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.8em;
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 3.8rem); }
+h2 { font-size: clamp(1.8rem, 4vw, 2.4rem); }
+h3 { font-size: clamp(1.3rem, 3vw, 1.6rem); }
+h4 { font-size: 1.1rem; font-weight: 600; }
+
+p {
+    margin-bottom: 1rem;
+    color: var(--color-texto-claro);
+}
+
+/* ---------- Botones Profesionales ---------- */
+.boton {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: var(--radio-borde);
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    transition: var(--transicion);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.boton::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.1);
+    transform: translateX(-100%);
+    transition: var(--transicion);
+}
+
+.boton:hover::after {
+    transform: translateX(0);
+}
+
+.boton:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-fuerte);
+}
+
+.boton-primario {
+    background: linear-gradient(135deg, var(--color-primario), #0040C9);
+    color: var(--color-blanco);
+}
+
+.boton-secundario {
+    background: linear-gradient(135deg, var(--color-secundario), #00B49A);
+    color: var(--color-blanco);
+}
+
+.boton-invitado {
+    background: var(--color-blanco);
+    color: var(--color-texto);
+    border: 2px solid var(--color-borde);
+}
+
+.boton-invitado:hover {
+    background: var(--color-fondo);
+    border-color: var(--color-primario);
+    color: var(--color-primario);
+    box-shadow: var(--sombra-suave);
+}
+
+.boton-pequeno {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    background-color: var(--color-primario);
+    color: white;
+    font-weight: 500;
+}
+
+/* ---------- Tarjetas y Cajas ---------- */
+.tarjeta {
+    background: var(--color-blanco);
+    padding: 28px;
+    border-radius: var(--radio-borde-grande);
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicion);
+    border: 1px solid transparent;
+}
+
+.tarjeta:hover {
+    box-shadow: var(--sombra-media);
+    border-color: var(--color-borde);
+    transform: translateY(-2px);
+}
+
+/* ---------- Formularios ---------- */
+.formulario-contenedor {
+    max-width: 450px;
+    margin: 40px auto;
+}
+
+.formulario {
+    background: var(--color-blanco);
+    padding: 40px;
+    border-radius: var(--radio-borde-grande);
+    box-shadow: var(--sombra-media);
+}
+
+.formulario h2 {
+    text-align: center;
+    color: var(--color-primario);
+    margin-bottom: 30px;
+}
+
+.grupo-input {
+    margin-bottom: 22px;
+}
+
+.grupo-input label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--color-texto);
+}
+
+.grupo-input input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    font-size: 1rem;
+    transition: var(--transicion);
+    background-color: #FCFCFD;
+}
+
+.grupo-input input:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 4px rgba(22, 93, 255, 0.1);
+    background-color: var(--color-blanco);
+}
+
+.enlace-texto {
+    color: var(--color-primario);
+    font-weight: 500;
+    transition: var(--transicion);
+}
+
+.enlace-texto:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Cabecera Hero ---------- */
+.hero {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.hero h1 {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 16px;
+}
+
+.hero .subtitulo {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--color-texto-claro);
+}
+
+/* ---------- Navegación y Botones Principales ---------- */
+.botones-accion {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    margin: 20px 0 60px;
+}
+
+@media (min-width: 768px) {
+    .botones-accion {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .boton {
+        min-width: 200px;
+    }
+}
+
+/* ---------- Dashboard / Panel Principal ---------- */
+.panel-principal {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 30px 0;
+}
+
+@media (min-width: 992px) {
+    .panel-principal {
+        grid-template-columns: 1fr 1fr;
+    }
+    .seccion-grande {
+        grid-column: 1 / -1;
+    }
+}
+
+.seccion-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.seccion-titulo span {
+    font-size: 1.4rem;
+}
+
+.lista-elementos {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.item-lista {
+    padding: 12px 16px;
+    background-color: #F7F8FA;
+    border-radius: 8px;
+    transition: var(--transicion);
+    cursor: pointer;
+    border-left: 4px solid transparent;
+}
+
+.item-lista:hover {
+    background-color: #EFF1F5;
+    border-left-color: var(--color-secundario);
+    transform: translateX(4px);
+}
+
+/* ---------- Utilidades ---------- */
+.volver {
+    display: inline-block;
+    margin: 20px 0;
+    color: var(--color-texto-claro);
+    font-weight: 500;
+    transition: var(--transicion);
+}
+
+.volver:hover {
+    color: var(--color-primario);
+    transform: translateX(-4px);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--color-texto-claro);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--color-borde);
+    margin-top: 40px;
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animar {
+    animation: fadeInUp 0.6s ease-out both;
+}
